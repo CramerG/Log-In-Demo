@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import UserList from './UserList';
+import {Link} from '@reach/router';
 
 const LogIn = props => {
     axios.defaults.withCredentials = true;
@@ -41,6 +41,8 @@ const LogIn = props => {
                 <input type="submit" value="Log In"/>
             </form>
             <button onClick={buttonHandler}>Log Out</button>
+            <br/>
+            <Link to="/users">See Users</Link>
         </div>
     )
 }
